@@ -69,7 +69,7 @@ void QuickNotifyPlugin::HandleMethodCall(
   } else if (method_call.method_name().compare("notify") == 0) {
     auto args = std::get<flutter::EncodableMap>(*method_call.arguments());
     auto title = std::get<std::string>(args[flutter::EncodableValue("title")]);
-    auto content = std::get<std::int>(args[flutter::EncodableValue("content")]);
+    auto content = std::get<std::int16_t>(args[flutter::EncodableValue("content")]);
 
     auto toastContent = ToastNotificationManager::GetTemplateContent(ToastTemplateType::ToastText02);
     XmlNodeList xmlNodeList = toastContent.GetElementsByTagName(L"text");
