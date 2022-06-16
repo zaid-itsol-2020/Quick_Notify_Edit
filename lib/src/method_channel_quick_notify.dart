@@ -24,7 +24,7 @@ class MethodChannelQuickNotify extends QuickNotifyPlatform {
   }) {
     _channel.invokeMethod('notify', {
       'title': title,
-      content: content,
+      'content': content,
     });
   }
 }
